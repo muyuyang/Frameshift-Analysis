@@ -66,8 +66,8 @@ def find_region_alignment(input_path,pos):
             A.find_seq(pos)
 
 
-input_path = '/Users/muyuyang/Desktop/Frith Lab/results/E coli O157_H7/k12-o157-2.maf'
-pos = 213614
+input_path = '/Users/muyuyang/Desktop/Frith Lab/TEST2/align-2.maf'
+pos = 34068
 
 find_region_alignment(input_path,pos)
 

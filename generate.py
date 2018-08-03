@@ -2,6 +2,7 @@ import os
 from gap_find import gap_find
 from determine_ancestry import ancestry
 import random
+from classes import Alignment,Frameshift
 
 def last_db(input1_path,db_name,output_path):
     command = 'lastdb -P0 -uMAM4 -R01 '+output_path+db_name+' '+input1_path

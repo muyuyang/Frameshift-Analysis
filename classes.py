@@ -66,6 +66,9 @@ class Frameshift(object):
         self.gene_id = None
         self.uniprot_id = None
 
+    def __hash__(self):
+        return (self.start1,self.length)
+
 
     #print the actual sequence alignment around the frameshift mutation
     def find_alignment_region(self):

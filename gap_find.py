@@ -30,9 +30,10 @@ def find_frameshifts(alignments):
 
 def find_individual_annotation(pos,length,annotation):
     start = 0
-    end = len(annotation)
+    end = len(annotation)-1
     info = ''
-    while start <= end:
+    length = len(annotation)
+    while length > 0 and start <= end:
         mid = (start+end) // 2
         A = annotation[mid]
         if A.is_in(pos,length):
@@ -96,15 +97,14 @@ def gap_find(alignments,annotation1,annotation2,output_path):
 # annotation2_path = '/Users/muyuyang/Desktop/Frith Lab/data/oryza chloroplast/Oryza_sativa_chloroplast.gb'
 # output_path = '/Users/muyuyang/Desktop/Frith Lab/results/oryza chloroplast Sativa vs Coarctata/os-oc-result-type.txt'
 
-# alignment_path = '/Users/muyuyang/Desktop/Frith Lab/results/E coli O157_H7/k12-o157-2.maf'
-# annotation1_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/K-12_annotation.gb'
-# annotation2_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/O157_H7_annotation.gb'
-# output_path = '/Users/muyuyang/Desktop/Frith Lab/results/E coli O157_H7/k12-o157-result.txt'
-# alignments = read_alignment(alignment_path)
-# annotation1 = read_annotation(annotation1_path)
-# annotation2 = read_annotation(annotation2_path)
-
-# gap_find(alignment_path,annotation1_path,annotation2_path,output_path)
+alignment_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/results/align-2.maf'
+annotation1_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/data/Oryza minuta.gb'
+annotation2_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/data/Oryza sativa.gb'
+output_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/results/testingtesting.txt'
+alignments = read_alignment(alignment_path)
+annotation1 = read_annotation(annotation1_path)
+annotation2 = read_annotation(annotation2_path)
+gap_find(alignments,annotation1,annotation2,output_path)
 
 # To-do:
 #   1. Compare with outgroup to decide which is ancestral. (Decide where the mutation happens)

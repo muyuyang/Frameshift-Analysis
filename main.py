@@ -70,14 +70,14 @@ def main(genome1_path,genome2_path,output_path):
     evaluate_effect(frameshifts,originalSeq1,originalSeq2,feature_path)
 
 
-genome1_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/K-12_annotation.gb'
-genome2_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/O157_H7_annotation.gb'
-output_path = '/Users/muyuyang/Desktop/Frith Lab/TEST/'
+# genome1_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/K-12_annotation.gb'
+# genome2_path = '/Users/muyuyang/Desktop/Frith Lab/data/Escherichia coli/O157_H7_annotation.gb'
+# output_path = '/Users/muyuyang/Desktop/Frith Lab/TEST/'
 
 
-# genome1_path = '/Users/muyuyang/Downloads/sequence3.gb'
-# genome2_path = '/Users/muyuyang/Downloads/sequence4.gb'
-# output_path = '/Users/muyuyang/Desktop/Frith Lab/TEST2/'
+genome1_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/data/Oryza sativa.gb'
+genome2_path = '/Users/muyuyang/Desktop/Frith Lab/TEST_TIMING/data/Oryza coarctata.gb'
+output_path = '/Users/muyuyang/Desktop/Frith Lab/TEST2/'
 
 
 main(genome1_path,genome2_path,output_path)

@@ -38,12 +38,11 @@ def align(input1_path,input2_path,output_path):
     db_name = 'db'
     training_name = 'align.mat'
     last_db(input1_path,db_name,output_path)
-    e_threshold = 40000
+    e_threshold = 4 * 10 ** 8
     last_train(input2_path,output_path,training_name,db_name,e_threshold)
     align1_name = 'align-1.maf'
     many_to_one_alignment(input2_path,output_path,db_name,training_name,e_threshold,align1_name)
     align2_name = 'align-2.maf'
     one_to_one_alignment(output_path,align1_name,align2_name)
     plot(output_path,align2_name)
-
 
